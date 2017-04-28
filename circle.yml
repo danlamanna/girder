@@ -29,8 +29,7 @@ dependencies:
 
 test:
   override:
-    - ~/girder/cmake/run_circleci.sh:
-        parallel: true
+    - env | grep -o 'ANSIBLE_GALAXY_GITHUB_TOKEN'
 
 deployment:
   master:
